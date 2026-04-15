@@ -161,3 +161,20 @@ Experimentos gerados pelo pipeline:
 | pandas        | 2.2.3   | manipulação de dados             |
 | scipy         | 1.15.2  | KS test para detecção de drift   |
 | joblib        | 1.4.2   | serialização de modelos          |
+
+
+## Como instalar o MLFLOW
+
+1 - Eu utilizei o kind para testar
+
+```
+helm uninstall mlflow -n mlflow || true
+
+helm install mlflow community-charts/mlflow \
+  -n mlflow \
+  --create-namespace \
+  --set backendStore.defaultSqlitePath=/mlflow/data/mlflow.db \
+  --timeout 15m \
+  --wait
+
+```
