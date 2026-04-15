@@ -23,7 +23,6 @@
 FROM python:3.13-slim
 
 # Metadados da imagem (boa prática)
-LABEL maintainer="matheus.munhoz@arcoeducacao.com.br"
 LABEL description="Iris Classifier — Real-Time Inference API"
 LABEL version="1.0.0"
 
